@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@import VerifyIosSdk;
 
+@interface ViewController : UIViewController <VerifyUIDelegate>
+
+    @property (nonatomic) BOOL verificationSuccessful;
+    
+    -(void)userVerified:(BOOL)verified;
 
 @end
 

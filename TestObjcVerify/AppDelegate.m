@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+@import VerifyIosSdk;
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [NexmoClient startWithApplicationId:@"SOME_APP_ID" sharedSecretKey:@"SOME_SECRET_KEY"];
     return YES;
 }
 
